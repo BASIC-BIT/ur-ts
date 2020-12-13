@@ -1,0 +1,22 @@
+First pass (naive strategy):
+Come up with many individual strategies, that filter moves down in priority order
+Capture  - capture piece
+Contested Rosette - land on the center rosette
+Play Piece - put piece in play
+Rosette - Land on rosette
+Score - Score a piece
+Safety - Land on a safe square
+Move Farthest - move as far as possible forward
+
+
+Second pass (weighted moves) (machine learning Lite):
+Save data in database of some kind - Columns are: Board state, move, roll, wins, and losses
+Record all board states and moves during game
+At end of the game, record the win or loss for each history entry
+
+
+When using this data for an AI:
+Lookup all moves in DB for board state and roll.
+Confirm data is valid - same number of moves in database as available moves, and all have a decent threshhold of total games (>100?)
+If data is valid, take the move with the highest win rate.
+If data is invalid, resort to heuristic techniques maybe?

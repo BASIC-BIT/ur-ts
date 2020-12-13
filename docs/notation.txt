@@ -1,0 +1,20 @@
+The goal of board state notation is to uniquely describe a board state, in a format that is cheap to encode/decode
+Board state notation should also allow for variable piece counts, with any number of digits
+
+To denote a winning state, tile state is not recorded, and only "W*" or "B*" are used to denote the winner
+
+For now, notation is being encoded in a string with the following order:
+
+Tile state (going left to right, then top to bottom, 20 total characters), with text 'W', 'B', or '-'
+hash separator "#"
+Count of unplayed white pieces
+hash separator "#"
+Count of scored white pieces
+hash separator "#"
+Count of unplayed black pieces
+hash separator "#"
+Count of scored black pieces
+hash separator "#"
+Current player turn, 'W' or 'B'
+
+Example:
